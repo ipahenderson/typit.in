@@ -11,21 +11,22 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended:true}));
 
 
-MongoClent.connect("mongoldb://localhost:27017", function(){
-	if(err){
-		console.log(err)
-	return;
+MongoClient.connect("mongoldb://localhost:27017", function(err, result){
+  if(err){
+    console.log(err)
+    return;
+  }
 })
 
 server.get("api/words", function(req, res){
-d.collection("typit_words").find().toArray(function(err, result){
-res.status(200);
-res.json(result);
-});
+  d.collection("typit_words").find().toArray(function(err, result){
+    res.status(200);
+    res.json(result);
+  });
 })
 
 server.use(express.static("build"));
 
 server.listen(5000, function(){
- console.log(‘Typit Backend running on port: ’ + this.address().port);
+  console.log("Typit Backend running on port: " + this.address().port);
 });
