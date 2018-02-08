@@ -1,0 +1,61 @@
+body{
+  background-color: #fff5cc;
+}
+
+h1{
+  background-color: white;
+  border: 5px solid green;
+}
+
+.keyboard-container{
+  width: 685px;
+  height: 200px;
+  background-color: skyblue;
+  padding: 20px 100px 120px 20px;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+
+.key{
+  font: 25px sans-serif;
+  width: 50px;
+  height:50px;
+  display:block;
+  background-color:orange;
+  text-align: center;
+  padding-left: 8px;
+  line-height: 50px;
+  border-radius:8px;
+  border: 2px solid black;
+  float:left; margin-left: 3px;
+  margin-bottom:3px;
+  transition: box-shadow 0.2s ease;
+}
+
+.key:hover{
+  box-shadow:0px 0px 10px green;
+  z-index:500;
+  transform: scale(1.5) perspective(1px)
+}
+
+#space{
+  width: 250px;
+  margin-left: 210px;
+  margin-top: 10px;
+}
+
+#key_Q{
+  margin-left: 35px;
+}
+
+#key_A{
+  margin-left: 55px;
+}
+
+#key_L{
+  margin-right: 25px;
+}
+
+#key_Z{
+  margin-left: 75px;
+}
