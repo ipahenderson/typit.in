@@ -20,3 +20,8 @@ it('should be able to set a word', function(){
   words.word = "apple"
   assert.strictEqual(words.word, "apple");
 });
+
+it('should be able to set an answer', function(){
+  words.answer = "apple"
+  assert.strictEqual(words.answer, "apple");
+});
