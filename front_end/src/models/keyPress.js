@@ -5,13 +5,18 @@ const startKeyListener = function(){
 
 document.addEventListener('keydown', function(){
 
+  function changeCSS(keyID){
+    document.querySelector(keyID).style.cssText = "box-shadow:0px 0px 10px green;z-index:500;transform: scale(1.5) perspective(1px)";
+
+
+  }
 
   function keyPress(e){
     // keyBoard.addKey(e.key);
     if(e.keyCode == 48){
       keyBoard.addKey(e.key);
+      changeCSS('#key_0');
       console.log(keyBoard.pressedKeys);
-      // ('#key_0').css("background", "red")
     }
     if(e.keyCode == 49){ // 1
       keyBoard.addKey(e.key);
