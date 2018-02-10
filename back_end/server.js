@@ -1,32 +1,34 @@
 
-var express = require("express");
-var server = express();
+const express = require("express");
+const server = express();
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const cors = require('cors');
 const objectID = require('mongodb').ObjectID;
-server.use(cors());
-server.use(express.static('front_end/build'));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended:true}));
+server.use(cors());
 
 
-MongoClient.connect("mongoldb://localhost:27017", function(err, result){
+MongoClient.connect("mongodb://localhost:27017", function(err, client){
   if(err){
     console.log(err)
     return;
   }
-})
 
-server.get("api/words", function(req, res){
-  d.collection("typit_words").find().toArray(function(err, result){
-    res.status(200);
-    res.json(result);
+  const db = client.db('words');
+
+  server.get("/api/words", function(req, res){
+    console.log('connection made');
+    db.collection("words").find().toArray(function(err, result){
+      res.status(200);
+      res.json(result);
+    });
+  })
+
+
+  server.listen(5000, function(){
+    console.log("Typit Backend running on port: " + this.address().port);
   });
-})
 
-server.use(express.static("build"));
-
-server.listen(5000, function(){
-  console.log("Typit Backend running on port: " + this.address().port);
 });

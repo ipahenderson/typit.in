@@ -58,6 +58,12 @@ h1{
   transition: box-shadow 0.2s ease;
 }
 
+.pressed{
+  box-shadow:0px 0px 10px green;
+  z-index:500;
+  transform: scale(1.5) perspective(1px)
+}
+
 .key:hover{
   box-shadow:0px 0px 10px green;
   z-index:500;

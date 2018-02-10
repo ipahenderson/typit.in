@@ -4,7 +4,7 @@ const Request = function(url) {
 }
 
 Request.prototype.get = function(callback){
-  console.log("anything");
+
   const request = new XMLHttpRequest();
   request.open('GET', this.url);
   request.addEventListener('load', function(){
@@ -15,6 +15,7 @@ Request.prototype.get = function(callback){
 
     callback(responseBody);
   });
+  console.log(request);
   request.send();
 };
 
