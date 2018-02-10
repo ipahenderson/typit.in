@@ -43,6 +43,7 @@ h1{
   font-size: 40px;
   border-radius: 20px;
   float: none;
+  cursor: pointer;
 }
 
 button:focus {outline:0;}
@@ -102,6 +103,7 @@ button:focus {outline:0;}
   background-image: url('/images/reset.png');
   background-size: cover;
   padding: 0;
+
 }
 
 #key_A{
