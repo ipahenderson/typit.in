@@ -49,10 +49,10 @@ button:focus {outline:0;}
 
 .keyboard-container{
   margin:0 auto;
-  width: 685px;
+  width: 760px;
   height: 200px;
   background-color: skyblue;
-  padding: 10px 100px 100px 20px;
+  padding: 10px 15px 100px 20px;
   border: 3px solid black;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -94,6 +94,14 @@ button:focus {outline:0;}
 
 #key_Q{
   margin-left: 35px;
+}
+
+#reset{
+  border-radius: 50%;
+  margin-left: 45px;
+  background-image: url('/images/reset.png');
+  background-size: cover;
+  padding: 0;
 }
 
 #key_A{
