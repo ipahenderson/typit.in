@@ -32,6 +32,20 @@ h1{
 
 }
 
+#start-button{
+  background-color: green;
+  width: 200px;
+  height: 75px;
+  margin: 0 auto;
+  margin-top: 125px;
+  border: 2px solid black;
+  font-style: comic;
+  font-size: 40px;
+  border-radius: 20px;
+  float: none;
+}
+
+button:focus {outline:0;}
 
 .keyboard-container{
   margin:0 auto;

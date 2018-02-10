@@ -18,12 +18,12 @@ const app = function(){
 
   startButton.addEventListener('click', function(){
 
-    startButton.style.cssText = "visibility:hidden;height:0px";
+    this.parentNode.removeChild(this);
     const keyBoard = new KeyBoard();
     var gameData = wordsData.giveData();
     const words = new Words(keyBoard, gameData, wordsView);
     console.log(words.keyboard);
-    words.prepareRound(8);
+    words.prepareRound(10);
     keyPress(words.keyboard);
     keyRelease();
   })
