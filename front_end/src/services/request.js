@@ -15,7 +15,6 @@ Request.prototype.get = function(callback){
 
     callback(responseBody);
   });
-  console.log(request);
   request.send();
 };
 
