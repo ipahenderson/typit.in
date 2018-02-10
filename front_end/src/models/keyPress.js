@@ -1,7 +1,7 @@
 const KeyBoard = require('./keyboard.js');
 
 
-const startKeyListener = function(){
+const startKeyListener = function(keyBoard){
 
 document.addEventListener('keydown', function(){
 
