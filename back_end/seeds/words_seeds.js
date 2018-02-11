@@ -8,6 +8,8 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
 
   const db = client.db('words');
 
+  db.collection('words').drop();
+
   db.collection('words').insert([
     //foods
     {
@@ -149,7 +151,7 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
     {
       word: "hedgehog",
       category: "animal",
-      image: "/images/animals/hedghog.svg"
+      image: "/images/animals/hedgehog.svg"
     },
 
     {
