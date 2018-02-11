@@ -5,6 +5,8 @@ document.addEventListener('keyup', function(){
 
   function changeCSS(keyID){
   document.querySelector(keyID).classList.remove('pressed');
+  document.querySelector(keyID).classList.remove('wrong-key');
+  document.querySelector(keyID).classList.remove('correct-key');
 
   }
 

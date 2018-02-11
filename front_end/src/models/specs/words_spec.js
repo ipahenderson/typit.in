@@ -99,6 +99,22 @@ it('should be able to check letter', function(){
   assert.strictEqual(words.answer, "app__");
 });
 
+it('should start with a next letter', function(){
+  words.setWord('apple');
+  words.setAnswerLength();
+  assert.strictEqual(words.nextletter, "a");
+});
+
+it('should have next letter', function(){
+  words.setWord('apple');
+  words.setAnswerLength();
+  words.checkLetter('a');
+  words.checkLetter('p');
+  words.checkLetter('p');
+  words.checkLetter('l');
+  assert.strictEqual(words.nextletter, "e");
+});
+
 it('nextletter should be empty when game complete', function(){
   words.setWord('apple');
   words.setAnswerLength();

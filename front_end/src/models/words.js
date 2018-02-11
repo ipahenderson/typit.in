@@ -90,7 +90,7 @@ Words.prototype.winCheck = function () {
 Words.prototype.run = function(letter){
   this.checkLetter(letter);
   this.gameview.updateAnswer(this.answer);
-  this.winCheck();
+  return(this.winCheck());
 };
 
 
