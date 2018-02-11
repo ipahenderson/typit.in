@@ -25,9 +25,10 @@ const app = function(){
     const words = new Words(keyBoard, gameData, wordsView);
     words.getWordsToPlay('animal');
     console.log(words.keyboard);
-    words.prepareRound(1);
-    keyPress(words.keyboard);
+    words.prepareRound(4);
+    keyPress(words);
     keyRelease();
+    words.gameview.updateAnswer('hedge___');
   })
 
 

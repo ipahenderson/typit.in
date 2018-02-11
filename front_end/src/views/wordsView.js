@@ -21,6 +21,11 @@ WordsView.prototype.prepareWord = function(word){
   return newWord;
 }
 
+WordsView.prototype.updateAnswer = function (newAnswer) {
+  answerView = document.querySelector('#answer-display');
+  answerView.innerText = this.prepareWord(newAnswer);
+};
+
 WordsView.prototype.render = function(data, answerIn){
   var word = document.createElement('p');
   word.id = "display-word";

@@ -80,6 +80,8 @@ it('should be able to fill in answer', function(){
   words.fillAnswer('p');
   assert.strictEqual(words.answer, "app__");
 });
+
+
 // it('should prepare a round', function(){
 //   words.prepareRound(0);
 //   assert.strictEqual(words.word, "apple");
