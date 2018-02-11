@@ -1,6 +1,7 @@
 const Words = function(keyboard, gamedata, gameview){
   this.word = "";
   this.answer = "";
+  this.nextletter = "";
   this.keyboard = keyboard;
   this.gamedata = gamedata;
   this.gameview = gameview;
@@ -10,13 +11,14 @@ const Words = function(keyboard, gamedata, gameview){
 Words.prototype.setAnswerLength = function () {
   var newAnswer = "";
   for (var i = 0 ; i < this.word.length ; i++) {
-    newAnswer += "_"
+    newAnswer += "_";
   }
   this.answer = newAnswer;
 };
 
 Words.prototype.setWord = function(wordIn){
   this.word = wordIn;
+  this.nextletter = this.word.charAt(0);
 }
 
 Words.prototype.getWordsToPlay = function(category){
@@ -38,17 +40,23 @@ Words.prototype.fillAnswer = function (letter) {
   var newAnswerArray = [];
   for (var i = 0; i < this.answer.length; i++) {
     if (this.answer.charAt(i) !== '_'){
-      newAnswerArray.push(this.answer.charAt(i))
+      newAnswerArray.push(this.answer.charAt(i));
     }
   }
   newAnswerArray.push(letter);
-  var letterCount = newAnswerArray.length
-  for (var i = 0; i < (this.answer.length - letterCount); i++) {
-    newAnswerArray.push('_')
+  var letterCount = newAnswerArray.length;
+  this.nextletter = this.word.charAt(letterCount);
+  for (var i = 0; i < (this.word.length - (letterCount)); i++) {
+    newAnswerArray.push('_');
   }
   this.answer = newAnswerArray.join("");
 };
 
+Words.prototype.checkLetter = function(letterIn){
+  if (letterIn === this.nextletter){
+    this.fillAnswer(letterIn);
+  }
+}
 
 Words.prototype.prepareRound = function(index){
   console.log(this.wordsToPlay);
@@ -59,6 +67,11 @@ Words.prototype.prepareRound = function(index){
       this.gameview.render(this.wordsToPlay[i], this.answer)
     }
   }
+}
+
+Words.prototype.run = function(letter){
+  this.checkLetter(letter);
+  this.gameview.updateAnswer(this.answer);
 }
 
 

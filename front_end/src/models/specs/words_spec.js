@@ -77,7 +77,25 @@ it('should be able to fill in answer', function(){
   words.setAnswerLength();
   words.fillAnswer('a');
   words.fillAnswer('p');
-  words.fillAnswer('p');
+  assert.strictEqual(words.answer, "ap___");
+});
+
+it('should not accept the wrong letter', function(){
+  words.setWord('apple')
+  words.setAnswerLength();
+  words.checkLetter('z')
+  assert.strictEqual(words.answer, "_____");
+});
+
+
+
+it('should be able to check letter', function(){
+  words.setWord('apple')
+  words.setAnswerLength();
+  words.checkLetter('a')
+  words.checkLetter('p')
+  words.checkLetter('z')
+  words.checkLetter('p')
   assert.strictEqual(words.answer, "app__");
 });
 
