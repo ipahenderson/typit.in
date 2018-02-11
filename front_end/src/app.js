@@ -23,7 +23,7 @@ const app = function(){
     var gameData = wordsData.giveData();
     const words = new Words(keyBoard, gameData, wordsView);
     console.log(words.keyboard);
-    words.prepareRound(10);
+    words.prepareRound(11);
     keyPress(words.keyboard);
     keyRelease();
   })
