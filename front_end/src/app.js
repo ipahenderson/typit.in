@@ -18,8 +18,8 @@ const app = function(){
 
 
   startButton.addEventListener('click', function(){
-
     this.parentNode.removeChild(this);
+
     const keyBoard = new KeyBoard();
     var gameData = wordsData.giveData();
     const words = new Words(keyBoard, gameData, wordsView);
@@ -28,6 +28,11 @@ const app = function(){
     words.prepareRound(0);
     keyPress(words);
     keyRelease();
+
+    speakButton = document.querySelector('#speaker');
+    speakButton.addEventListener('click', function () {
+      this.onclick(responsiveVoice.speak(words.word))
+    })
 
   })
 
