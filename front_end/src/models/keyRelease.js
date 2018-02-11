@@ -120,6 +120,21 @@ document.addEventListener('keyup', function(){
     if(e.keyCode == 32){ // z
       changeCSS('#space');
     }
+    if(e.keyCode == 13){ // z
+      changeCSS('#enter');
+    }
+    if(e.keyCode == 37){ // z
+      changeCSS('#key_left');
+    }
+    if(e.keyCode == 38){ // z
+      changeCSS('#key_up');
+    }
+    if(e.keyCode == 39){ // z
+      changeCSS('#key_right');
+    }
+    if(e.keyCode == 40){ // z
+      changeCSS('#key_down');
+    }
 
   };
   document.onkeyup = keyRelease;
