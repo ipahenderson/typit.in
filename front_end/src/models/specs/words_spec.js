@@ -99,6 +99,20 @@ it('should be able to check letter', function(){
   assert.strictEqual(words.answer, "app__");
 });
 
+it('nextletter should be empty when game complete', function(){
+  words.setWord('apple');
+  words.setAnswerLength();
+  words.checkLetter('a');
+  words.checkLetter('p');
+  words.checkLetter('p');
+  words.checkLetter('l');
+  words.checkLetter('e');
+  assert.strictEqual(words.nextletter, "");
+});
+
+
+
+
 
 // it('should prepare a round', function(){
 //   words.prepareRound(0);

@@ -2,8 +2,8 @@ body{
   background-color: #fff5cc;
   margin: 0px 0px 0px 0px;
   background-image: url('/images/letter_background.jpg');
-  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1{

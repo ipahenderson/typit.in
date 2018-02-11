@@ -26,6 +26,10 @@ WordsView.prototype.updateAnswer = function (newAnswer) {
   answerView.innerText = this.prepareWord(newAnswer);
 };
 
+WordsView.prototype.clearRound = function(){
+  this.container.innerHTML = "";
+}
+
 WordsView.prototype.render = function(data, answerIn){
   var word = document.createElement('p');
   word.id = "display-word";

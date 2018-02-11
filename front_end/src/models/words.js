@@ -20,6 +20,13 @@ Words.prototype.setWord = function(wordIn){
   this.word = wordIn;
   this.nextletter = this.word.charAt(0);
 }
+Words.prototype.shuffle = function(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
 
 Words.prototype.getWordsToPlay = function(category){
   var playArray = [];
@@ -29,7 +36,7 @@ Words.prototype.getWordsToPlay = function(category){
         playArray.push(word)
       }
     }
-    this.wordsToPlay = playArray;
+    this.wordsToPlay = this.shuffle(playArray);
   }
   else{
     this.wordsToPlay = this.gamedata;
@@ -69,10 +76,23 @@ Words.prototype.prepareRound = function(index){
   }
 }
 
+
+Words.prototype.winCheck = function () {
+  var roundCount = 0;
+  for (var i = 0; i < this.wordsToPlay.length; i++) {
+    if(this.word === this.answer){
+      roundCount ++;
+      this.gameview.clearRound();
+      this.prepareRound(roundCount);
+    }
+  }
+};
+
 Words.prototype.run = function(letter){
   this.checkLetter(letter);
   this.gameview.updateAnswer(this.answer);
-}
+  this.winCheck();
+};
 
 
 
