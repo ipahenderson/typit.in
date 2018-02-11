@@ -71,6 +71,15 @@ it('should be able to set wordsToPlay with no provided category', function(){
   words.getWordsToPlay()
   assert.strictEqual(words.wordsToPlay.length, 2);
 });
+
+it('should be able to fill in answer', function(){
+  words.setWord('apple')
+  words.setAnswerLength();
+  words.fillAnswer('a');
+  words.fillAnswer('p');
+  words.fillAnswer('p');
+  assert.strictEqual(words.answer, "app__");
+});
 // it('should prepare a round', function(){
 //   words.prepareRound(0);
 //   assert.strictEqual(words.word, "apple");

@@ -34,6 +34,21 @@ Words.prototype.getWordsToPlay = function(category){
   }
 };
 
+Words.prototype.fillAnswer = function (letter) {
+  var newAnswerArray = [];
+  for (var i = 0; i < this.answer.length; i++) {
+    if (this.answer.charAt(i) !== '_'){
+      newAnswerArray.push(this.answer.charAt(i))
+    }
+  }
+  newAnswerArray.push(letter);
+  var letterCount = newAnswerArray.length
+  for (var i = 0; i < (this.answer.length - letterCount); i++) {
+    newAnswerArray.push('_')
+  }
+  this.answer = newAnswerArray.join("");
+};
+
 
 Words.prototype.prepareRound = function(index){
   console.log(this.wordsToPlay);
