@@ -67,6 +67,10 @@ it('should be able to set wordsToPlay based on category', function(){
   assert.strictEqual(words.wordsToPlay.length, 1);
 });
 
+it('should be able to set wordsToPlay with no provided category', function(){
+  words.getWordsToPlay()
+  assert.strictEqual(words.wordsToPlay.length, 2);
+});
 // it('should prepare a round', function(){
 //   words.prepareRound(0);
 //   assert.strictEqual(words.word, "apple");

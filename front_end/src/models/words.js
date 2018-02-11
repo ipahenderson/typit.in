@@ -36,12 +36,12 @@ Words.prototype.getWordsToPlay = function(category){
 
 
 Words.prototype.prepareRound = function(index){
-  console.log(this.gamedata);
-  for (var i = 0; i < this.gamedata.length; i++) {
+  console.log(this.wordsToPlay);
+  for (var i = 0; i < this.wordsToPlay.length; i++) {
     if (index === i){
-      this.setWord(this.gamedata[i].word);
+      this.setWord(this.wordsToPlay[i].word);
       this.setAnswerLength();
-      this.gameview.render(this.gamedata[i], this.answer)
+      this.gameview.render(this.wordsToPlay[i], this.answer)
     }
   }
 }

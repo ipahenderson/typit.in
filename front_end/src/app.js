@@ -16,14 +16,16 @@ const app = function(){
   wordsData.getData();
 
 
+
   startButton.addEventListener('click', function(){
 
     this.parentNode.removeChild(this);
     const keyBoard = new KeyBoard();
     var gameData = wordsData.giveData();
     const words = new Words(keyBoard, gameData, wordsView);
+    words.getWordsToPlay('animal');
     console.log(words.keyboard);
-    words.prepareRound(4);
+    words.prepareRound(0);
     keyPress(words.keyboard);
     keyRelease();
   })
