@@ -19,7 +19,6 @@ document.addEventListener('keydown', function(){
   }
 
   function keyPress(e){
-    //
     if(e.keyCode == 48){
       react(game, e.key, '#key_0');
       console.log (game.keyboard.pressedKeys);
