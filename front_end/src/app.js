@@ -16,7 +16,6 @@ const app = function(){
   wordsData.getData();
 
 
-
   startButton.addEventListener('click', function(){
     this.parentNode.removeChild(this);
 
@@ -29,12 +28,12 @@ const app = function(){
     keyPress(words);
     keyRelease();
 
-    speakButton = document.querySelector('#speaker');
-    speakButton.addEventListener('click', function () {
+    var speakButton = document.querySelector('#speaker');
+    speakButton.addEventListener('click', function(){
       responsiveVoice.speak(words.word)
-    })
+    });
 
-  })
+  });
 
 
 };
