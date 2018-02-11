@@ -10,7 +10,7 @@ const Words = function(keyboard, gamedata, gameview){
 Words.prototype.setAnswerLength = function () {
   var newAnswer = "";
   for (var i = 0 ; i < this.word.length ; i++) {
-    newAnswer += "_ "
+    newAnswer += "_"
   }
   this.answer = newAnswer;
 };

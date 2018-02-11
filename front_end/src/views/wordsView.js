@@ -10,6 +10,17 @@ image.alt = data.name;
 return image;
 };
 
+WordsView.prototype.prepareWord = function(word){
+  var wordIn = word;
+  var newWord = '';
+  var wordSplit = [];
+  for (var i = 0; i < wordIn.length; i++) {
+    wordSplit.push(wordIn.charAt(i))
+    newWord += (wordSplit[i] + ' ');
+  }
+  return newWord;
+}
+
 WordsView.prototype.render = function(data, answerIn){
   var word = document.createElement('p');
   word.id = "display-word";
@@ -19,8 +30,8 @@ WordsView.prototype.render = function(data, answerIn){
 
   var image = this.createImage (data);
   image.style.cssText = "width: 120px;height: 120px;"
-  word.innerText = data.word;
-  answer.innerText = answerIn;
+  word.innerText = this.prepareWord(data.word);
+  answer.innerText = this.prepareWord(answerIn);
 
   this.container.appendChild(word);
   this.container.appendChild(image);

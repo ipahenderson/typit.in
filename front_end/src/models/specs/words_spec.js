@@ -53,7 +53,7 @@ it('should start with an empty wordsToPlay', function(){
 it('should setWord and setAnswerLength', function(){
   words.setWord('test')
   words.setAnswerLength();
-  assert.deepEqual(words.answer, "_ _ _ _ ");
+  assert.deepEqual(words.answer, "____");
   assert.strictEqual(words.word, "test");
 });
 
@@ -62,7 +62,7 @@ it('should be able to set a word from gamedata', function(){
   assert.strictEqual(words.word, "apple");
 });
 
-it('should prepare a round', function(){
-  words.prepareRound(0);
-  assert.strictEqual(words.word, "apple");
-})
+// it('should prepare a round', function(){
+//   words.prepareRound(0);
+//   assert.strictEqual(words.word, "apple");
+// })
