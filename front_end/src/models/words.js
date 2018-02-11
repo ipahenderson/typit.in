@@ -6,6 +6,7 @@ const Words = function(keyboard, gamedata, gameview){
   this.gamedata = gamedata;
   this.gameview = gameview;
   this.wordsToPlay = [];
+  this.roundCount = 0;
 }
 
 Words.prototype.setAnswerLength = function () {
@@ -29,6 +30,7 @@ Words.prototype.shuffle = function(a) {
 }
 
 Words.prototype.getWordsToPlay = function(category){
+  this.roundCount = 0;
   var playArray = [];
   if (category){
     for (word of this.gamedata){
@@ -78,13 +80,10 @@ Words.prototype.prepareRound = function(index){
 
 
 Words.prototype.winCheck = function () {
-  var roundCount = 0;
-  for (var i = 0; i < this.wordsToPlay.length; i++) {
-    if(this.word === this.answer){
-      roundCount ++;
-      this.gameview.clearRound();
-      this.prepareRound(roundCount);
-    }
+  if(this.word === this.answer){
+    this.roundCount += 1;
+    this.gameview.clearRound();
+    this.prepareRound(this.roundCount);
   }
 };
 
