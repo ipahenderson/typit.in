@@ -20,7 +20,7 @@ beforeEach(function(){
 	{
 		"_id": "5a7eef69a2b10990107c5149",
 		"word": "banana",
-		"category": "food",
+		"category": "fruit",
 		"image": "/images/food/banana.svg"
 	}
   ]
@@ -60,6 +60,11 @@ it('should setWord and setAnswerLength', function(){
 it('should be able to set a word from gamedata', function(){
   words.setWord(words.gamedata[0].word);
   assert.strictEqual(words.word, "apple");
+});
+
+it('should be able to set wordsToPlay based on category', function(){
+  words.getWordsToPlay('fruit')
+  assert.strictEqual(words.wordsToPlay.length, 1);
 });
 
 // it('should prepare a round', function(){

@@ -19,6 +19,22 @@ Words.prototype.setWord = function(wordIn){
   this.word = wordIn;
 }
 
+Words.prototype.getWordsToPlay = function(category){
+  var playArray = [];
+  if (category){
+    for (word of this.gamedata){
+      if (category == word.category){
+        playArray.push(word)
+      }
+    }
+    this.wordsToPlay = playArray;
+  }
+  else{
+    this.wordsToPlay = this.gamedata;
+  }
+};
+
+
 Words.prototype.prepareRound = function(index){
   console.log(this.gamedata);
   for (var i = 0; i < this.gamedata.length; i++) {
@@ -29,6 +45,7 @@ Words.prototype.prepareRound = function(index){
     }
   }
 }
+
 
 
 module.exports = Words;
