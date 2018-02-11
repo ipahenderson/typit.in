@@ -31,7 +31,7 @@ const app = function(){
 
     speakButton = document.querySelector('#speaker');
     speakButton.addEventListener('click', function () {
-      this.onclick(responsiveVoice.speak(words.word))
+      responsiveVoice.speak(words.word)
     })
 
   })

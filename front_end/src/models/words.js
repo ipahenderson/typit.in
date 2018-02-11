@@ -82,8 +82,13 @@ Words.prototype.prepareRound = function(index){
 Words.prototype.winCheck = function () {
   if(this.word === this.answer){
     this.roundCount += 1;
-    this.gameview.clearRound();
-    this.prepareRound(this.roundCount);
+    var timethis = this;
+    setTimeout(function () {
+      timethis.gameview.clearRound();
+    }, 600);
+    setTimeout(function () {
+      timethis.prepareRound(timethis.roundCount);
+    }, 660);
   }
 };
 
