@@ -1,7 +1,6 @@
 body{
   background-color: #fff5cc;
   margin: 0px 0px 0px 0px;
-  background-image: url('/images/letter_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -89,6 +88,21 @@ h1{
   background-image: url('/images/test/test.svg');
 }
 
+#add-game-button{
+  background-image: url('/images/maths/add.svg');
+}
+
+#minus-game-button{
+  background-image: url('/images/maths/minus.svg');
+}
+
+#multiply-game-button{
+  background-image: url('/images/maths/times.svg');
+}
+
+#divide-game-button{
+  background-image: url('/images/maths/divide.svg');
+}
 button:focus {outline:0;}
 
 .keyboard-container{
