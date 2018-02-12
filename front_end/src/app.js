@@ -61,7 +61,7 @@ const app = function(){
 
     var speakButton = document.querySelector('#speaker');
     speakButton.addEventListener('click', function(){
-      responsiveVoice.speak(words.word)
+      responsiveVoice.speak(words.word, "Polish Female")
     });
 
   });
