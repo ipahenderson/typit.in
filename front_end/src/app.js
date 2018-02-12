@@ -19,14 +19,79 @@ const app = function(){
 
   wordsData.getData();
 
+  var deleteButtons = function(){
+    animalButton.parentNode.removeChild(animalButton);
+    clothingButton.parentNode.removeChild(clothingButton);
+    foodButton.parentNode.removeChild(foodButton);
+    colourButton.parentNode.removeChild(colourButton);
+
+  }
+
 
   animalButton.addEventListener('click', function(){
-    this.parentNode.removeChild(this);
+    deleteButtons();
 
     const keyBoard = new KeyBoard();
     var gameData = wordsData.giveData();
     const words = new Words(keyBoard, gameData, wordsView);
     words.getWordsToPlay('animal');
+    console.log(words.keyboard);
+    words.prepareRound(0);
+    keyPress(words);
+    keyRelease();
+
+    var speakButton = document.querySelector('#speaker');
+    speakButton.addEventListener('click', function(){
+      responsiveVoice.speak(words.word)
+    });
+
+  });
+
+  foodButton.addEventListener('click', function(){
+    deleteButtons();
+
+    const keyBoard = new KeyBoard();
+    var gameData = wordsData.giveData();
+    const words = new Words(keyBoard, gameData, wordsView);
+    words.getWordsToPlay('food');
+    console.log(words.keyboard);
+    words.prepareRound(0);
+    keyPress(words);
+    keyRelease();
+
+    var speakButton = document.querySelector('#speaker');
+    speakButton.addEventListener('click', function(){
+      responsiveVoice.speak(words.word)
+    });
+
+  });
+
+  colourButton.addEventListener('click', function(){
+    deleteButtons();
+
+    const keyBoard = new KeyBoard();
+    var gameData = wordsData.giveData();
+    const words = new Words(keyBoard, gameData, wordsView);
+    words.getWordsToPlay('colour');
+    console.log(words.keyboard);
+    words.prepareRound(0);
+    keyPress(words);
+    keyRelease();
+
+    var speakButton = document.querySelector('#speaker');
+    speakButton.addEventListener('click', function(){
+      responsiveVoice.speak(words.word)
+    });
+
+  });
+
+  clothingButton.addEventListener('click', function(){
+    deleteButtons();
+
+    const keyBoard = new KeyBoard();
+    var gameData = wordsData.giveData();
+    const words = new Words(keyBoard, gameData, wordsView);
+    words.getWordsToPlay('clothing');
     console.log(words.keyboard);
     words.prepareRound(0);
     keyPress(words);

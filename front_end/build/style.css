@@ -69,11 +69,11 @@ h1{
 }
 
 #food-game-button{
-  background-image: url('/images/food/tomato.svg');
+  background-image: url('/images/food/apple.svg');
 }
 
 #colour-game-button{
-  background-image: url('/images/colours/color-wheel.svg');
+  background-image: url('/images/colours/palette.svg');
 }
 
 #clothing-game-button{
