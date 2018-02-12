@@ -98,6 +98,7 @@ h1{
 
 #multiply-game-button{
   background-image: url('/images/maths/times.svg');
+  background-size: 60%;
 }
 
 #divide-game-button{
