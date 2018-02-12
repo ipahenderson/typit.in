@@ -44,7 +44,7 @@ const app = function(){
 
     var speakButton = document.querySelector('#speaker');
     speakButton.addEventListener('click', function(){
-      responsiveVoice.speak(words.word)
+      responsiveVoice.speak(words.word, "Russian Female")
     });
 
   });
@@ -82,7 +82,7 @@ const app = function(){
 
     var speakButton = document.querySelector('#speaker');
     speakButton.addEventListener('click', function(){
-      responsiveVoice.speak(words.word)
+      responsiveVoice.speak(words.word, "Italian Female")
     });
 
   });
@@ -101,7 +101,7 @@ const app = function(){
 
     var speakButton = document.querySelector('#speaker');
     speakButton.addEventListener('click', function(){
-      responsiveVoice.speak(words.word)
+      responsiveVoice.speak(words.word, "Afrikaans Male")
     });
 
   });
