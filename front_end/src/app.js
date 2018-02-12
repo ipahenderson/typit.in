@@ -17,7 +17,6 @@ const app = function(){
   const foodButton = document.querySelector('#food-game-button');
   const testButton = document.querySelector('#test-game-button');
 
-
   wordsData.getData();
 
   var deleteButtons = function(){
@@ -26,9 +25,7 @@ const app = function(){
     foodButton.parentNode.removeChild(foodButton);
     colourButton.parentNode.removeChild(colourButton);
     testButton.parentNode.removeChild(testButton);
-
   }
-
 
   animalButton.addEventListener('click', function(){
     deleteButtons();
@@ -122,6 +119,11 @@ const app = function(){
     speakButton.addEventListener('click', function(){
       responsiveVoice.speak(words.word)
     });
+
+
+    
+
+
 
   });
 
