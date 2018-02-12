@@ -80,7 +80,7 @@ Words.prototype.prepareRound = function(index){
       this.gameview.winScreen();
     }
   }
-}
+};
 
 
 Words.prototype.winCheck = function () {

@@ -14,8 +14,13 @@ WordsView.prototype.winScreen = function (){
   var wintext = document.createElement('p');
   wintext.id = "win-text";
   wintext.innerText = "Well Done!"
-
+  var image = document.createElement('img');
+  image.id = 'win-image';
+  image.src = '/images/trophy.svg'
+  image.alt = 'trophy'
+  image.style.cssText = "width: 120px;height: 120px;"
   this.container.appendChild(wintext);
+  this.container.appendChild(image);
 }
 
 WordsView.prototype.prepareWord = function(word){
