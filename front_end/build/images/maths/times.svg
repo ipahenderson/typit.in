@@ -1,51 +1,36 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="62px" height="62px" viewBox="0 0 42 42" enable-background="new 0 0 62 62" xml:space="preserve">  <image id="image0" width="62" height="62" x="-10" y="-10"
-    xlink:href="data:image/png;base64,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
-zwQbHwZnDUtUmOqt0Wsvp464fxT/wVF8cpBBTwc1FSnWC1aK+r54vzWw6m5TpbGj5Y9s8GEFOjat
-YRcVtvU8rPHhobJAP9gwx8CK4KMza1cN54JmeUI9zkILA3eIzSCMN4lgVv63/N7i1jCTiT5nrWKD
-DyvQsUcQm9awi8qNyb3gADteL7hSugFXBF2Vy2zN6EQNWkBrbnjfSP2UShPsoqIEXnev9P3kXhwb
-fFiBji2ZfhUStW86c46IGTfOfphLuG5zBpVB4yy0gNYGPpdJZdqZNlWe9wLFhLHVim+CBvlJfLTY
-6XtJ9mkeKRy1Qp6ljhDOpWQCJ/kA6sn3NIdi4wPZCw3kFF4NY+o29MsztIDWzM/RU3raSDncgsqH
-NYOQ6VBGkr3yBLXCvJAZirygX/o/J630+/oHAz2gSPq2al72rJj1SYe824V5EoAzcB6KHO+TDc5J
-TB2sJzJGSTRMBpUCUTDPnu8MoL3wJn54M2W0luGrMSe22I45TvS2QDgoYDxDkYlMMlMOq4jNEcEs
-cd6mQuAdSiQ3iBp8jmQSTeTifv9U770jdrHBh/1W6XHdy6+fLcyqXXdw+m2ddUvnDGOqvdWchV1U
-2NaDfSZvqiMjFh5iL5KdRY2iYxnnj7S/e3nzlVrDyZthgpnUt1SDn14yXvGnkMmKTUFLMhs0kYvp
-6JofScM17EXioRNp16nejQa602kLMSRijyA2rWEXFXttPQ+qZYvlDx0KQ1zfe6aPunb0/t5QOabb
-N/6pGf7zpBf96v2XsrW679djdHP05OixuMR40sRD50A8dA7EQ+dAPHQOxEPnQDx0DsRD50A8dA7E
-Q+dAPHQOxEPnQDx0DvQ/0OXAt6OeT54AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDItMTJUMDk6
-MjI6NTQtMDc6MDCbpQPZAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAyLTEyVDA5OjIyOjU0LTA3
-OjAw6vi7ZQAAAEN0RVh0c3ZnOmJhc2UtdXJpAGZpbGU6Ly8vYzovd2Vic2l0ZS9jb252ZXJ0L3Az
-cjY4LWNkeDY3L2U4MHRpLTlxZDV5LnN2Z1uoy0sAAAAASUVORK5CYII=" />
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
+<line style="fill:none;stroke:#ED8A19;stroke-width:2;stroke-miterlimit:10;" x1="42" y1="21" x2="0" y2="21"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
 </svg>
