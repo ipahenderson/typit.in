@@ -11,12 +11,16 @@ const app = function(){
   const wordsData = new WordsData('http://localhost:5000/api/words');
   const wordsView = new WordsView(document.querySelector('.game-window'));
   const startButton = document.querySelector('#start-button');
+  const animalButton = document.querySelector('#animal-game-button');
+  const colourButton = document.querySelector('#colour-game-button');
+  const clothingButton = document.querySelector('#clothing-game-button');
+  const foodButton = document.querySelector('#food-game-button');
 
 
   wordsData.getData();
 
 
-  startButton.addEventListener('click', function(){
+  animalButton.addEventListener('click', function(){
     this.parentNode.removeChild(this);
 
     const keyBoard = new KeyBoard();
