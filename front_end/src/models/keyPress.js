@@ -1,6 +1,6 @@
 
 const startKeyListener = function (game){
-document.addEventListener('keydown', function(){
+  document.onkeydown = keyPress;
 
 
   function react(gameIn, key, keyID){
@@ -145,7 +145,5 @@ document.addEventListener('keydown', function(){
     }
 
   };
-  document.onkeydown = keyPress;
-})
 };
 module.exports = startKeyListener;
