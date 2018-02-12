@@ -341,6 +341,13 @@ db.collection('maths').insert([
     image3: "/images/maths/two.svg",
     image4: "/images/maths/minus.svg",
     image5: "/images/maths/one.svg"
+  },
+
+  //test file
+  {
+    word: "test",
+    category: "test",
+    image: "/images/test/test.svg"
   }
 
 ])
