@@ -335,7 +335,7 @@ db.collection('maths').insert([
   },
   {
     problem: "2 plus 2 is 4. Minus 1 that's 3, quick maths",
-    category: "add",
+    category: "bigshaq",
     image1: "/images/maths/two.svg",
     image2: "/images/maths/add.svg",
     image3: "/images/maths/two.svg"
