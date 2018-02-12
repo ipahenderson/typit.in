@@ -251,96 +251,122 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
 db.collection('maths').insert([
   {
     problem: "1 + 1",
+    solution: "2",
     category: "add",
     image1: "/images/maths/one.svg",
     image2: "/images/maths/add.svg",
-    image3: "/images/maths/one.svg"
+    image3: "/images/maths/one.svg",
+    image4: "/images/maths/two.svg"
   },
   {
     problem: "2 + 2",
+    solution: "4",
     category: "add",
     image1: "/images/maths/two.svg",
     image2: "/images/maths/add.svg",
-    image3: "/images/maths/two.svg"
+    image3: "/images/maths/two.svg",
+    image4: "/images/maths/four.svg"
   },
   {
     problem: "5 + 5",
+    solution: "10",
     category: "add",
     image1: "/images/maths/five.svg",
     image2: "/images/maths/add.svg",
-    image3: "/images/maths/five.svg"
+    image3: "/images/maths/five.svg",
+    image4: "/images/maths/ten.svg"
   },
   {
     problem: "6 / 2",
+    solution: "3",
     category: "divide",
     image1: "/images/maths/six.svg",
     image2: "/images/maths/division.svg",
-    image3: "/images/maths/two.svg"
+    image3: "/images/maths/two.svg",
+    image4: "/images/maths/three.svg"
   },
   {
     problem: "10 - 1",
+    solution: "9",
     category: "minus",
     image1: "/images/maths/ten.svg",
     image2: "/images/maths/minus.svg",
-    image3: "/images/maths/one.svg"
+    image3: "/images/maths/one.svg",
+    image4: "/images/maths/nine.svg"
   },
   {
     problem: "8 - 4",
+    solution: "4",
     category: "minus",
     image1: "/images/maths/eight.svg",
     image2: "/images/maths/minus.svg",
-    image3: "/images/maths/four.svg"
+    image3: "/images/maths/four.svg",
+    image4: "/images/maths/four.svg"
   },
   {
     problem: "2 x 2",
+    solution: "4",
     category: "times",
     image1: "/images/maths/two.svg",
     image2: "/images/maths/times.svg",
-    image3: "/images/maths/two.svg"
+    image3: "/images/maths/two.svg",
+    image4: "/images/maths/four.svg"
   },
   {
     problem: "7 + 2",
+    solution: "9",
     category: "add",
     image1: "/images/maths/seven.svg",
     image2: "/images/maths/add.svg",
-    image3: "/images/maths/two.svg"
+    image3: "/images/maths/two.svg",
+    image4: "/images/maths/nine.svg"
   },
   {
     problem: "5 - 4",
+    solution: "1",
     category: "minus",
     image1: "/images/maths/five.svg",
     image2: "/images/maths/minus.svg",
-    image3: "/images/maths/four.svg"
+    image3: "/images/maths/four.svg",
+    image4: "/images/maths/one.svg"
   },
   {
     problem: "3 + 3",
+    solution: "6",
     category: "add",
     image1: "/images/maths/three.svg",
     image2: "/images/maths/add.svg",
-    image3: "/images/maths/three.svg"
+    image3: "/images/maths/three.svg",
+    image4: "/images/maths/six.svg"
   },
   {
     problem: "6 + 4",
+    solution: "10",
     category: "add",
     image1: "/images/maths/six.svg",
     image2: "/images/maths/add.svg",
-    image3: "/images/maths/four.svg"
+    image3: "/images/maths/four.svg",
+    image4: "/images/maths/ten.svg"
   },
   {
     problem: "10 - 9",
+    solution: "1",
     category: "minus",
     image1: "/images/maths/ten.svg",
     image2: "/images/maths/minus.svg",
-    image3: "/images/maths/nine.svg"
+    image3: "/images/maths/nine.svg",
+    image4: "/images/maths/one.svg"
   },
   {
     problem: "2 plus 2 is 4. Minus 1 that's 3, quick maths",
     category: "bigshaq",
+    solution: "3",
     image1: "/images/maths/two.svg",
     image2: "/images/maths/add.svg",
     image3: "/images/maths/two.svg",
     image4: "/images/maths/minus.svg",
-    image5: "/images/maths/one.svg"
+    image5: "/images/maths/one.svg",
+    image6: "/images/maths/three.svg"
   },
 
   //test file
