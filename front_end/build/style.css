@@ -103,6 +103,17 @@ h1{
 #divide-game-button{
   background-image: url('/images/maths/divide.svg');
 }
+
+#answer-display{
+  margin-bottom: 25px;
+}
+
+#counter-display{
+  margin: 0px 8px 5px 5px;
+  font-size: 18px;
+  float: right;
+  text-align: right;
+}
 button:focus {outline:0;}
 
 .keyboard-container{

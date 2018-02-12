@@ -47,21 +47,27 @@ WordsView.prototype.clearRound = function(){
   this.container.innerHTML = "";
 }
 
-WordsView.prototype.render = function(data, answerIn){
+WordsView.prototype.render = function(data, answerIn, roundCount, totalRounds){
   var word = document.createElement('p');
   word.id = "display-word";
 
   var answer = document.createElement('p');
   answer.id = "answer-display";
 
+  var counter = document.createElement('p');
+  counter.id = "counter-display";
+  counter.innerText = `${(roundCount + 1)} of  ${totalRounds}`
+
   var image = this.createImage (data);
   image.style.cssText = "width: 120px;height: 120px;"
   word.innerText = this.prepareWord(data.word);
   answer.innerText = this.prepareWord(answerIn);
 
+
   this.container.appendChild(word);
   this.container.appendChild(image);
   this.container.appendChild(answer);
+  this.container.appendChild(counter);
 }
 
 module.exports = WordsView;
