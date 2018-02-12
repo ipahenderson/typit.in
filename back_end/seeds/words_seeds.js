@@ -6,9 +6,12 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
     return;
   }
 
-  const db = client.db('words');
+  const db = client.db('data');
+
 
   db.collection('words').drop();
+  db.collection('maths').drop();
+
 
   db.collection('words').insert([
     //foods
@@ -244,6 +247,101 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
       image: "/images/test/test.svg"
     }
   ]
-
 )
+db.collection('maths').insert([
+  {
+    problem: "1 + 1",
+    category: "add",
+    image1: "/images/maths/one.svg",
+    image2: "/images/maths/add.svg",
+    image3: "/images/maths/one.svg"
+  },
+  {
+    problem: "2 + 2",
+    category: "add",
+    image1: "/images/maths/two.svg",
+    image2: "/images/maths/add.svg",
+    image3: "/images/maths/two.svg"
+  },
+  {
+    problem: "5 + 5",
+    category: "add",
+    image1: "/images/maths/five.svg",
+    image2: "/images/maths/add.svg",
+    image3: "/images/maths/five.svg"
+  },
+  {
+    problem: "6 / 2",
+    category: "divide",
+    image1: "/images/maths/six.svg",
+    image2: "/images/maths/division.svg",
+    image3: "/images/maths/two.svg"
+  },
+  {
+    problem: "10 - 1",
+    category: "minus",
+    image1: "/images/maths/ten.svg",
+    image2: "/images/maths/minus.svg",
+    image3: "/images/maths/one.svg"
+  },
+  {
+    problem: "8 - 4",
+    category: "minus",
+    image1: "/images/maths/eight.svg",
+    image2: "/images/maths/minus.svg",
+    image3: "/images/maths/four.svg"
+  },
+  {
+    problem: "2 x 2",
+    category: "times",
+    image1: "/images/maths/two.svg",
+    image2: "/images/maths/times.svg",
+    image3: "/images/maths/two.svg"
+  },
+  {
+    problem: "7 + 2",
+    category: "add",
+    image1: "/images/maths/seven.svg",
+    image2: "/images/maths/add.svg",
+    image3: "/images/maths/two.svg"
+  },
+  {
+    problem: "5 - 4",
+    category: "minus",
+    image1: "/images/maths/five.svg",
+    image2: "/images/maths/minus.svg",
+    image3: "/images/maths/four.svg"
+  },
+  {
+    problem: "3 + 3",
+    category: "add",
+    image1: "/images/maths/three.svg",
+    image2: "/images/maths/add.svg",
+    image3: "/images/maths/three.svg"
+  },
+  {
+    problem: "6 + 4",
+    category: "add",
+    image1: "/images/maths/six.svg",
+    image2: "/images/maths/add.svg",
+    image3: "/images/maths/four.svg"
+  },
+  {
+    problem: "10 - 9",
+    category: "minus",
+    image1: "/images/maths/ten.svg",
+    image2: "/images/maths/minus.svg",
+    image3: "/images/maths/nine.svg"
+  },
+  {
+    problem: "2 plus 2 is 4. Minus 1 that's 3, quick maths",
+    category: "add",
+    image1: "/images/maths/two.svg",
+    image2: "/images/maths/add.svg",
+    image3: "/images/maths/two.svg"
+    image4: "/images/maths/minus.svg"
+    image5: "/images/maths/one.svg"
+  }
+
+])
 });

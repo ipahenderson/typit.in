@@ -16,11 +16,19 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
     return;
   }
 
-  const db = client.db('words');
+  const db = client.db('data');
 
   server.get("/api/words", function(req, res){
     console.log('connection made');
     db.collection("words").find().toArray(function(err, result){
+      res.status(200);
+      res.json(result);
+    });
+  })
+
+  server.get("/api/maths", function(req, res){
+    console.log('connection made');
+    db.collection("maths").find().toArray(function(err, result){
       res.status(200);
       res.json(result);
     });
