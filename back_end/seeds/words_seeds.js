@@ -338,8 +338,8 @@ db.collection('maths').insert([
     category: "bigshaq",
     image1: "/images/maths/two.svg",
     image2: "/images/maths/add.svg",
-    image3: "/images/maths/two.svg"
-    image4: "/images/maths/minus.svg"
+    image3: "/images/maths/two.svg",
+    image4: "/images/maths/minus.svg",
     image5: "/images/maths/one.svg"
   }
 
