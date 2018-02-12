@@ -1,7 +1,7 @@
 
 const startKeyUpListener = function(){
 
-document.addEventListener('keyup', function(){
+  document.onkeyup = keyRelease;
 
   function changeCSS(keyID){
   document.querySelector(keyID).classList.remove('pressed');
@@ -139,7 +139,6 @@ document.addEventListener('keyup', function(){
     }
 
   };
-  document.onkeyup = keyRelease;
-})
+
 };
 module.exports = startKeyUpListener;

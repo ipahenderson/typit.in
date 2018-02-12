@@ -2,8 +2,7 @@ const KeyBoard = require('./keyboard.js');
 
 
 const startKeyListener = function (game){
-
-document.addEventListener('keydown', function(){
+  document.onkeydown = keyPress;
 
 
 
@@ -181,7 +180,5 @@ document.addEventListener('keydown', function(){
     }
 
   };
-  document.onkeydown = keyPress;
-})
 };
 module.exports = startKeyListener;
