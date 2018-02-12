@@ -11,16 +11,20 @@ return image;
 };
 
 WordsView.prototype.winScreen = function (){
-  var wintext = document.createElement('p');
-  wintext.id = "win-text";
-  wintext.innerText = "Well Done!"
+  var welltext = document.createElement('p');
+  welltext.id = "win-text";
+  welltext.innerText = "w e l l "
+  var donetext = document.createElement('p');
+  donetext.id = "win-text";
+  donetext.innerText = " d o n e !"
   var image = document.createElement('img');
   image.id = 'win-image';
   image.src = '/images/trophy.svg'
   image.alt = 'trophy'
   image.style.cssText = "width: 120px;height: 120px;"
-  this.container.appendChild(wintext);
+  this.container.appendChild(welltext);
   this.container.appendChild(image);
+  this.container.appendChild(donetext);
 }
 
 WordsView.prototype.prepareWord = function(word){
