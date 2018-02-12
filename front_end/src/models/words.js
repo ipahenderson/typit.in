@@ -75,6 +75,10 @@ Words.prototype.prepareRound = function(index){
       this.setAnswerLength();
       this.gameview.render(this.wordsToPlay[i], this.answer)
     }
+    if (index >= this.wordsToPlay.length){
+      this.gameview.clearRound();
+      this.gameview.winScreen();
+    }
   }
 }
 
@@ -89,9 +93,6 @@ Words.prototype.winCheck = function () {
     setTimeout(function () {
       timethis.prepareRound(timethis.roundCount);
     }, 660);
-  }
-  if (this.roundCount > this.wordsToPlay){
-    this.gameview.winScreen()
   }
 };
 

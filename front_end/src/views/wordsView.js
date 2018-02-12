@@ -15,7 +15,7 @@ WordsView.prototype.winScreen = function (){
   wintext.id = "win-text";
   wintext.innerText = "Well Done!"
 
-  this.container.appendChild(word);
+  this.container.appendChild(wintext);
 }
 
 WordsView.prototype.prepareWord = function(word){
