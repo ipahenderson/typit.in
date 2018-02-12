@@ -90,6 +90,9 @@ Words.prototype.winCheck = function () {
       timethis.prepareRound(timethis.roundCount);
     }, 660);
   }
+  if (this.roundCount > this.wordsToPlay){
+    this.gameview.winScreen()
+  }
 };
 
 Words.prototype.run = function(letter){
@@ -97,7 +100,6 @@ Words.prototype.run = function(letter){
   this.gameview.updateAnswer(this.answer);
   return(this.winCheck());
 };
-
 
 
 

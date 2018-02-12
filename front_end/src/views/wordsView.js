@@ -10,6 +10,14 @@ image.alt = data.name;
 return image;
 };
 
+WordsView.prototype.winScreen = function (){
+  var wintext = document.createElement('p');
+  wintext.id = "win-text";
+  wintext.innerText = "Well Done!"
+
+  this.container.appendChild(word);
+}
+
 WordsView.prototype.prepareWord = function(word){
   var wordIn = word;
   var newWord = '';

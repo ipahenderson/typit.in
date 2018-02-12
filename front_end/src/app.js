@@ -106,5 +106,4 @@ const app = function(){
 
 
 };
-
 window.addEventListener('load', app);
