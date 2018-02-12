@@ -85,6 +85,10 @@ h1{
   background-image: url('/images/animals/cat.svg');
 }
 
+#test-game-button{
+  background-image: url('/images/test/test.svg');
+}
+
 button:focus {outline:0;}
 
 .keyboard-container{

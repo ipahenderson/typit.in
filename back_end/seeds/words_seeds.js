@@ -235,6 +235,13 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
       word: "trousers",
       category: "clothing",
       image: "/images/clothing/trousers.svg"
+    },
+
+    //test file
+    {
+      word: "test",
+      category: "test",
+      image: "/images/test/test.svg"
     }
   ]
 
