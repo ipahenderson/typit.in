@@ -68,12 +68,12 @@ Words.prototype.checkLetter = function(letterIn){
 }
 
 Words.prototype.prepareRound = function(index){
-  console.log(this.wordsToPlay);
-  for (var i = 0; i < this.wordsToPlay.length; i++) {
+  var numberofRounds = this.wordsToPlay.length;
+  for (var i = 0; i < numberofRounds; i++) {
     if (index === i){
       this.setWord(this.wordsToPlay[i].word);
       this.setAnswerLength();
-      this.gameview.render(this.wordsToPlay[i], this.answer)
+      this.gameview.render(this.wordsToPlay[i], this.answer, this.roundCount, numberofRounds)
     }
     if (index >= this.wordsToPlay.length){
       this.gameview.clearRound();

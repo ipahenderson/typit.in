@@ -269,7 +269,10 @@ db.collection('maths').insert([
   },
   {
     problem: "5 + 4",
+<<<<<<< HEAD
     solution: "9",
+=======
+>>>>>>> develop
     category: "add",
     image1: "/images/maths/five.svg",
     image2: "/images/maths/add.svg",
