@@ -329,6 +329,54 @@ db.collection('maths').insert([
     image2: "/images/maths/minus.svg",
     image3: "/images/maths/four.svg",
     image4: "/images/maths/one.svg"
+  },{
+    problem: "10 divided by 5",
+    solution: "2",
+    category: "divide",
+    image1: "/images/maths/ten.svg",
+    image2: "/images/maths/divide.svg",
+    image3: "/images/maths/five.svg",
+    image4: "/images/maths/two.svg"
+  },{
+    problem: "4 divided by 2",
+    solution: "2",
+    category: "divide",
+    image1: "/images/maths/four.svg",
+    image2: "/images/maths/divide.svg",
+    image3: "/images/maths/two.svg",
+    image4: "/images/maths/two.svg"
+  },{
+    problem: "1 add 3",
+    solution: "4",
+    category: "add",
+    image1: "/images/maths/one.svg",
+    image2: "/images/maths/add.svg",
+    image3: "/images/maths/three.svg",
+    image4: "/images/maths/four.svg"
+  },{
+    problem: "2 times 3",
+    solution: "6",
+    category: "times",
+    image1: "/images/maths/two.svg",
+    image2: "/images/maths/times.svg",
+    image3: "/images/maths/three.svg",
+    image4: "/images/maths/six.svg"
+  },{
+    problem: "9 divided by 3",
+    solution: "3",
+    category: "divide",
+    image1: "/images/maths/nine.svg",
+    image2: "/images/maths/divide.svg",
+    image3: "/images/maths/three.svg",
+    image4: "/images/maths/three.svg"
+  },{
+    problem: "2 times 4",
+    solution: "8",
+    category: "times",
+    image1: "/images/maths/two.svg",
+    image2: "/images/maths/times.svg",
+    image3: "/images/maths/four.svg",
+    image4: "/images/maths/eight.svg"
   },
   {
     problem: "3 plus 3",
