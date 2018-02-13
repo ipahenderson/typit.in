@@ -75,7 +75,7 @@ const app = function(){
 
     var speakButton = document.querySelector('#speaker');
     speakButton.addEventListener('click', function(){
-      responsiveVoice.speak()
+      responsiveVoice.speak(maths.problemsToPlay[maths.roundCount].problem)
     });
 
   });
@@ -92,7 +92,7 @@ const app = function(){
 
     var speakButton = document.querySelector('#speaker');
     speakButton.addEventListener('click', function(){
-      responsiveVoice.speak()
+      responsiveVoice.speak(maths.problemsToPlay[maths.roundCount].problem)
     });
 
   });
@@ -109,7 +109,7 @@ const app = function(){
 
     var speakButton = document.querySelector('#speaker');
     speakButton.addEventListener('click', function(){
-      responsiveVoice.speak()
+      responsiveVoice.speak(maths.problemsToPlay[maths.roundCount].problem)
     });
 
   });
