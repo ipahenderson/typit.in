@@ -269,14 +269,11 @@ db.collection('maths').insert([
   },
   {
     problem: "5 + 4",
-<<<<<<< HEAD
     solution: "9",
-=======
->>>>>>> develop
     category: "add",
     image1: "/images/maths/five.svg",
     image2: "/images/maths/add.svg",
-    image3: "/images/maths/five.svg",
+    image3: "/images/maths/four.svg",
     image4: "/images/maths/nine.svg"
   },
   {
@@ -346,7 +343,7 @@ db.collection('maths').insert([
     problem: "3 + 4",
     solution: "7",
     category: "add",
-    image1: "/images/maths/six.svg",
+    image1: "/images/maths/three.svg",
     image2: "/images/maths/add.svg",
     image3: "/images/maths/four.svg",
     image4: "/images/maths/seven.svg"

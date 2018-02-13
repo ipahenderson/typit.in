@@ -9,7 +9,6 @@ const Maths = function(gamedata, gameview){
 
 Maths.prototype.setProblem = function(problemIn){
   this.nextletter = problemIn.solution;
-  this.solutionImage = problemIn.image4;
 }
 Maths.prototype.shuffle = function(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -39,7 +38,8 @@ Maths.prototype.prepareRound = function(index){
   var totalRound = this.problemsToPlay.length;
   for (var i = 0; i < totalRound; i++) {
     if (index === i){
-      this.setProblem(this.problemsToPlay[i].solution);
+      this.solution = this.problemsToPlay[i].solution;
+      this.setProblem(this.problemsToPlay[i]);
       this.gameview.render(this.problemsToPlay[i], this.roundCount, totalRound);
     }
     if (index >= this.problemsToPlay.length){
@@ -49,31 +49,25 @@ Maths.prototype.prepareRound = function(index){
   }
 };
 
-Maths.prototype.setAnswer = function(key){
-  if(key == this.solution){
-    this.answer = key;
-  }
+Maths.prototype.winCheck = function (key) {
+  console.log("solution", this.solution);
+  if(this.solution === key){
 
-}
-
-
-Maths.prototype.winCheck = function () {
-  if(this.solution === this.answer){
+    this.gameview.updateAnswer();
     this.roundCount += 1;
     var timethis = this;
     setTimeout(function () {
       timethis.gameview.clearRound();
-    }, 600);
+    }, 1000);
     setTimeout(function () {
       timethis.prepareRound(timethis.roundCount);
-    }, 660);
+    }, 1060);
   }
 };
 
 Maths.prototype.run = function(key){
-  this.setAnswer(key);
-  this.gameview.updateAnswer();
-  return(this.winCheck());
+  console.log(this.nextletter);
+  this.winCheck(key);
 };
 
 module.exports = Maths;

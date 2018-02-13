@@ -58,6 +58,57 @@ const app = function(){
 
     var speakButton = document.querySelector('#speaker');
     speakButton.addEventListener('click', function(){
+      responsiveVoice.speak(maths.problemsToPlay[maths.roundCount].problem);
+    });
+
+  });
+
+  minusButton.addEventListener('click', function(){
+    deleteButtons();
+
+    var gameData = mathsData.giveData();
+    const maths = new Maths(gameData, mathsView);
+    maths.getMathsToPlay('minus');
+    maths.prepareRound(0);
+    keyPress(maths);
+    keyRelease();
+
+    var speakButton = document.querySelector('#speaker');
+    speakButton.addEventListener('click', function(){
+      responsiveVoice.speak()
+    });
+
+  });
+
+  divideButton.addEventListener('click', function(){
+    deleteButtons();
+
+    var gameData = mathsData.giveData();
+    const maths = new Maths(gameData, mathsView);
+    maths.getMathsToPlay('divide');
+    maths.prepareRound(0);
+    keyPress(maths);
+    keyRelease();
+
+    var speakButton = document.querySelector('#speaker');
+    speakButton.addEventListener('click', function(){
+      responsiveVoice.speak()
+    });
+
+  });
+
+  multiplyButton.addEventListener('click', function(){
+    deleteButtons();
+
+    var gameData = mathsData.giveData();
+    const maths = new Maths(gameData, mathsView);
+    maths.getMathsToPlay('times');
+    maths.prepareRound(0);
+    keyPress(maths);
+    keyRelease();
+
+    var speakButton = document.querySelector('#speaker');
+    speakButton.addEventListener('click', function(){
       responsiveVoice.speak()
     });
 
