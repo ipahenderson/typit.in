@@ -34,6 +34,12 @@ h1{
 
 }
 
+.hide{
+  visibility: hidden;
+}
+
+
+
 #start-button{
   background-color: green;
   width: 200px;
@@ -60,6 +66,10 @@ h1{
   background-repeat: no-repeat;
   margin-top: 120px;
   cursor: pointer;
+}
+
+.dont-display{
+  display: none;
 }
 
 .game-select-button:hover{

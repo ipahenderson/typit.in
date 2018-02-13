@@ -2,19 +2,11 @@ const MathsView = function(container){
   this.container = container;
 }
 
-WordsView.prototype.createImage = function (data) {
-var image = document.createElement('img');
-image.id = "game-image";
-image.src = data.image;
-image.alt = data.name;
-return image;
-};
-
-WordsView.prototype.clearRound = function(){
+MathsView.prototype.clearRound = function(){
   this.container.innerHTML = "";
 }
 
-WordsView.prototype.winScreen = function (){
+MathsView.prototype.winScreen = function (){
   var welltext = document.createElement('p');
   welltext.id = "win-text";
   welltext.innerText = "w e l l "
@@ -31,16 +23,45 @@ WordsView.prototype.winScreen = function (){
   this.container.appendChild(donetext);
 }
 
-
-WordsView.prototype.render = function(data, roundCount, totalRound){
-  var image1 = this.createImage('img')
-
-  var image = this.createImage (data);
-  image.style.cssText = "width: 120px;height: 120px;"
+MathsView.prototype.updateAnswer = function () {
+  var answer = document.querySelector('#game-image4');
+  answer.classList.remove('hide');
+};
 
 
-  this.container.appendChild(image);
-  this.container.appendChild(answer);
+
+
+MathsView.prototype.render = function(data, roundCount, totalRounds){
+  var image1 = document.createElement('img');
+  image1.id = "game-image1";
+  image1.src = data.image1;
+  image1.style.cssText = "width: 75px;height: 75px;";
+
+  var image2 = document.createElement('img');
+  image2.id = "game-image2";
+  image2.src = data.image2;
+  image2.style.cssText = "width: 75px;height: 75px;";
+
+  var image3 = document.createElement('img');
+  image3.id = "game-image3";
+  image3.src = data.image3;
+  image3.style.cssText = "width: 75px;height: 75px;";
+
+  var image4 = document.createElement('img');
+  image4.id = "game-image4";
+  image4.src = data.image4;
+  image4.style.cssText = "width: 75px;height: 75px;";
+  image4.classList.add('hide');
+
+  var counter = document.createElement('p');
+  counter.id = "counter-display";
+  counter.innerText = `${(roundCount + 1)} of  ${totalRounds}`;
+
+  this.container.appendChild(image1);
+  this.container.appendChild(image2);
+  this.container.appendChild(image3);
+  this.container.appendChild(image4);
+  this.container.appendChild(counter);
 }
 
 module.exports = MathsView;

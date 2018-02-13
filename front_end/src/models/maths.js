@@ -5,7 +5,6 @@ const Maths = function(gamedata, gameview){
   this.gameview = gameview;
   this.problemsToPlay = [];
   this.roundCount = 0;
-  this.solutionImage = '';
 }
 
 Maths.prototype.setProblem = function(problemIn){
@@ -73,6 +72,8 @@ Maths.prototype.winCheck = function () {
 
 Maths.prototype.run = function(key){
   this.setAnswer(key);
-  this.gameview.updateAnswer(this.solutionImage);
+  this.gameview.updateAnswer();
   return(this.winCheck());
 };
+
+module.exports = Maths;
