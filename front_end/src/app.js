@@ -38,7 +38,7 @@ const app = function(){
   const divideButton = document.querySelector('#divide-game-button');
 
   const testButton = document.querySelector('#test-game-button');
-
+  const title = document.querySelector('#title');
   wordsData.getData();
   mathsData.getData();
 
@@ -52,6 +52,7 @@ const app = function(){
     minusButton.parentNode.removeChild(minusButton);
     divideButton.parentNode.removeChild(divideButton);
     multiplyButton.parentNode.removeChild(multiplyButton);
+    title.parentNode.removeChild(title);
   }
 
 
