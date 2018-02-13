@@ -264,7 +264,7 @@ db.collection('maths').insert([
     image3: "/images/maths/two.svg"
   },
   {
-    problem: "5 + 5",
+    problem: "5 + 4",
     category: "add",
     image1: "/images/maths/five.svg",
     image2: "/images/maths/add.svg",
