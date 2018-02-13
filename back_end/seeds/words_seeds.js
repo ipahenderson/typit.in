@@ -422,7 +422,166 @@ db.collection('maths').insert([
     word: "test",
     category: "test",
     image: "/images/test/test.svg"
-  }
+  }])
+  db.collection('flags').insert([
+    {
+      name:'Argentina',
+      coords: { lat: -38.416069, lng: -63.616672 },
+      zoom: 3,
+      image: "/images/flags/argentina.svg"
+    },
+    {
+      name:'Australia',
+      coords: { lat: -25.274398, lng: 133.775136 },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
+    {
+      name:'',
+      coords: { lat: , lng:  },
+      zoom: 3,
+      image: "/images/flags/.svg"
+    },
 
-])
+
+
+  ])
 });

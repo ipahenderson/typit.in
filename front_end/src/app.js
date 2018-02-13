@@ -16,9 +16,9 @@ const app = function(){
   var mapDiv = document.getElementById('main-map');
 
 
-  var center = { lat: 56.4907, lng: -4.2026 };
+  var center = { lat: -25.274398, lng: 133.775136 };
 
-  var mainMap = new MapWrapper(mapDiv, center, 5);
+  var mainMap = new MapWrapper(mapDiv, center, 3);
 
   const wordsData = new WordsData('http://localhost:5000/api/words');
   const mathsData = new MathsData('http://localhost:5000/api/maths');
