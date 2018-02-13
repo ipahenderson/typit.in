@@ -1,16 +1,16 @@
 const Maths = function(gamedata, gameview){
-  this.solution = "";
   this.answer = "";
   this.nextletter = "";
   this.gamedata = gamedata;
   this.gameview = gameview;
   this.problemsToPlay = [];
   this.roundCount = 0;
+  this.solutionImage = '';
 }
 
 Maths.prototype.setProblem = function(problemIn){
-  this.problem = problemIn;
-  this.nextletter = this.problem.charAt(0);
+  this.nextletter = problemIn.solution;
+  this.solutionImage = problemIn.image4;
 }
 Maths.prototype.shuffle = function(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -37,12 +37,11 @@ Maths.prototype.getMathsToPlay = function(category){
 };
 
 Maths.prototype.prepareRound = function(index){
-  console.log(this.problemsToPlay);
-  for (var i = 0; i < this.problemsToPlay.length; i++) {
+  var totalRound = this.problemsToPlay.length;
+  for (var i = 0; i < totalRound; i++) {
     if (index === i){
-      this.setproblem(this.problemsToPlay[i].problem);
-      this.setAnswerLength();
-      this.gameview.render(this.problemsToPlay[i], this.answer)
+      this.setProblem(this.problemsToPlay[i].solution);
+      this.gameview.render(this.problemsToPlay[i], this.roundCount, totalRound);
     }
     if (index >= this.problemsToPlay.length){
       this.gameview.clearRound();
@@ -51,9 +50,16 @@ Maths.prototype.prepareRound = function(index){
   }
 };
 
+Maths.prototype.setAnswer = function(key){
+  if(key == this.solution){
+    this.answer = key;
+  }
+
+}
+
 
 Maths.prototype.winCheck = function () {
-  if(this.problem === this.answer){
+  if(this.solution === this.answer){
     this.roundCount += 1;
     var timethis = this;
     setTimeout(function () {
@@ -65,8 +71,8 @@ Maths.prototype.winCheck = function () {
   }
 };
 
-Maths.prototype.run = function(letter){
-  this.checkLetter(letter);
-  this.gameview.updateAnswer(this.answer);
+Maths.prototype.run = function(key){
+  this.setAnswer(key);
+  this.gameview.updateAnswer(this.solutionImage);
   return(this.winCheck());
 };

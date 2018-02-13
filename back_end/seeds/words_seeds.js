@@ -268,13 +268,13 @@ db.collection('maths').insert([
     image4: "/images/maths/four.svg"
   },
   {
-    problem: "5 + 5",
-    solution: "10",
+    problem: "5 + 4",
+    solution: "9",
     category: "add",
     image1: "/images/maths/five.svg",
     image2: "/images/maths/add.svg",
     image3: "/images/maths/five.svg",
-    image4: "/images/maths/ten.svg"
+    image4: "/images/maths/nine.svg"
   },
   {
     problem: "6 / 2",
@@ -340,13 +340,13 @@ db.collection('maths').insert([
     image4: "/images/maths/six.svg"
   },
   {
-    problem: "6 + 4",
-    solution: "10",
+    problem: "3 + 4",
+    solution: "7",
     category: "add",
     image1: "/images/maths/six.svg",
     image2: "/images/maths/add.svg",
     image3: "/images/maths/four.svg",
-    image4: "/images/maths/ten.svg"
+    image4: "/images/maths/seven.svg"
   },
   {
     problem: "10 - 9",
