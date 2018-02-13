@@ -506,7 +506,7 @@ db.collection('maths').insert([
       name:'italy',
       coords: { lat: 41.871940, lng: 12.567380 },
       zoom: 4,
-      image: "/images/flags/itlay.svg"
+      image: "/images/flags/italy.svg"
     },
     {
       name:'japan',
