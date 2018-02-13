@@ -14,7 +14,25 @@ h1{
   width: 200px;
   text-align: center;;
 }
+#main-map {
+  width: 180px;
+  height: 180px;
+  margin: 0px 55px 0px 0px;
+  float: right;
+  border: 2px solid black;
+  border-radius: 90%;
+}
 
+#flag-image{
+  float: left;
+  margin: 40px 0px 0px 55px;
+  height: 100px;
+  width: 180px;
+}
+
+#flag-answer-display{
+  margin-top: 220px;
+}
 .game-container{
   width: 600px;
   height: 350px;
