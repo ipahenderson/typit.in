@@ -7,10 +7,19 @@ const WordsView = require('./views/wordsView.js');
 const MathsView = require('./views/mathsView.js');
 const Words = require('./models/words.js');
 const Maths = require('./models/maths.js');
+const MapWrapper = require('./models/mapWrapper.js');
 
 
 
 const app = function(){
+
+  var mapDiv = document.getElementById('main-map');
+
+
+  var center = { lat: 56.4907, lng: -4.2026 };
+
+  var mainMap = new MapWrapper(mapDiv, center, 5);
+
   const wordsData = new WordsData('http://localhost:5000/api/words');
   const mathsData = new MathsData('http://localhost:5000/api/maths');
   const wordsView = new WordsView(document.querySelector('.game-window'));
