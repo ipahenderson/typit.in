@@ -425,161 +425,149 @@ db.collection('maths').insert([
   }])
   db.collection('flags').insert([
     {
-      name:'Argentina',
+      name:'argentina',
       coords: { lat: -38.416069, lng: -63.616672 },
       zoom: 3,
       image: "/images/flags/argentina.svg"
     },
     {
-      name:'Australia',
+      name:'australia',
       coords: { lat: -25.274398, lng: 133.775136 },
       zoom: 3,
-      image: "/images/flags/.svg"
+      image: "/images/flags/australia.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'belgium',
+      coords: { lat: 50.503883, lng: 4.469936 },
+      zoom: 6,
+      image: "/images/flags/belgium.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
+      name:'brazil',
+      coords: { lat: -14.235004, lng: -51.925280 },
       zoom: 3,
-      image: "/images/flags/.svg"
+      image: "/images/flags/brazil.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'canada',
+      coords: { lat: 63.130366, lng: -106.346771 },
+      zoom: 2,
+      image: "/images/flags/canada.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
+      name:'china',
+      coords: { lat: 35.861660, lng: 104.195397 },
       zoom: 3,
-      image: "/images/flags/.svg"
+      image: "/images/flags/china.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'england',
+      coords: { lat: 52.355518, lng: -1.174320 },
+      zoom: 6,
+      image: "/images/flags/england.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'france',
+      coords: { lat: 46.277638, lng: 2.213749 },
+      zoom: 4,
+      image: "/images/flags/france.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'germany',
+      coords: { lat: 51.165691, lng: 10.451526 },
+      zoom: 4,
+      image: "/images/flags/germany.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'greece',
+      coords: { lat: 39.074208, lng: 21.824312 },
+      zoom: 5,
+      image: "/images/flags/greece.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'hungary',
+      coords: { lat: 47.162494, lng: 19.503304  },
+      zoom: 5,
+      image: "/images/flags/hunagry.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
+      name:'india',
+      coords: { lat: 20.593684, lng: 78.962880 },
       zoom: 3,
-      image: "/images/flags/.svg"
+      image: "/images/flags/india.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'ireland',
+      coords: { lat: 53.142367, lng: -7.692064 },
+      zoom: 5,
+      image: "/images/flags/ireland.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'italy',
+      coords: { lat: 41.871940, lng: 12.567380 },
+      zoom: 4,
+      image: "/images/flags/itlay.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'japan',
+      coords: { lat: 36.204824, lng: 138.252924 },
+      zoom: 4,
+      image: "/images/flags/japan.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
+      name:'netherlands',
+      coords: { lat: 52.132633, lng: 5.291266 },
       zoom: 3,
-      image: "/images/flags/.svg"
+      image: "/images/flags/netherlands.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'nigeria',
+      coords: { lat: 9.081999, lng: 8.675277 },
+      zoom: 4,
+      image: "/images/flags/nigeria.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'poland',
+      coords: { lat: 51.919438, lng: 19.145136 },
+      zoom: 4,
+      image: "/images/flags/poland.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'portugal',
+      coords: { lat: 39.399872, lng: -8.224454 },
+      zoom: 5,
+      image: "/images/flags/portugal.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
+      name:'romania',
+      coords: { lat: 45.943161, lng: 24.966760 },
       zoom: 3,
-      image: "/images/flags/.svg"
+      image: "/images/flags/romania.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'scotland',
+      coords: { lat: 56.890671, lng: -4.202646 },
+      zoom: 5,
+      image: "/images/flags/scotland.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
+      name:'slovakia',
+      coords: { lat: 48.069026, lng: 19.699024 },
+      zoom: 5,
+      image: "/images/flags/slovakia.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
+      name:'usa',
+      coords: { lat: 38.090240, lng: -99.712891 },
       zoom: 3,
-      image: "/images/flags/.svg"
+      image: "/images/flags/usa.svg"
     },
     {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
-    },
-    {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
-    },
-    {
-      name:'',
-      coords: { lat: , lng:  },
-      zoom: 3,
-      image: "/images/flags/.svg"
-    },
+      name:'wales',
+      coords: { lat: 52.380661, lng: -3.783712 },
+      zoom: 6,
+      image: "/images/flags/wales.svg"
+    }
 
 
 
