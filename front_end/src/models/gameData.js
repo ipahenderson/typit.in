@@ -1,11 +1,11 @@
 const Request = require('../services/request.js');
 
-const WordsData = function(url){
+const GameData = function(url){
   this.url = url;
   this.data = [];
 }
 
-WordsData.prototype.getData = function(){
+GameData.prototype.getData = function(){
   const request = new Request(this.url);
   const successGet = function(dataIn){
     this.data = dataIn;
@@ -14,8 +14,8 @@ WordsData.prototype.getData = function(){
   request.get(successGet);
 }
 
-WordsData.prototype.giveData = function () {
+GameData.prototype.giveData = function () {
   return this.data;
 };
 
-module.exports = WordsData;
+module.exports = GameData;

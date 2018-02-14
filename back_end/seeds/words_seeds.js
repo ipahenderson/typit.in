@@ -518,7 +518,7 @@ db.collection('maths').insert([
     {
       name:'netherlands',
       coords: { lat: 52.132633, lng: 5.291266 },
-      zoom: 3,
+      zoom: 4,
       image: "/images/flags/netherlands.svg"
     },
     {
