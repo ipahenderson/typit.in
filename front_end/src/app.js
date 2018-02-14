@@ -1,8 +1,8 @@
 const keyPress = require ('./models/keyPress');
 const keyRelease = require ('./models/keyRelease');
-const WordsData = require('./models/wordsData.js');
-const MathsData = require('./models/mathsData.js');
-const FlagsData = require('./models/flagsData.js');
+const WordsData = require('./models/gameData.js');
+const MathsData = require('./models/gameData.js');
+const FlagsData = require('./models/gameData.js');
 const WordsView = require('./views/wordsView.js');
 const MathsView = require('./views/mathsView.js');
 const FlagsView = require('./views/flagsView.js');
