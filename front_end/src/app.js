@@ -1,6 +1,5 @@
 const keyPress = require ('./models/keyPress');
 const keyRelease = require ('./models/keyRelease');
-const KeyBoard = require ('./models/keyboard.js');
 const WordsData = require('./models/wordsData.js');
 const MathsData = require('./models/mathsData.js');
 const FlagsData = require('./models/flagsData.js');
@@ -60,8 +59,6 @@ const app = function(){
     multiplyButton.parentNode.removeChild(multiplyButton);
     title.parentNode.removeChild(title);
     flagButton.parentNode.removeChild(flagButton);
-  
-
   }
 
 
@@ -70,7 +67,7 @@ const app = function(){
 
   flagButton.addEventListener('click', function(){
     deleteButtons();
-mapDiv.classList.remove('dont-display');
+    mapDiv.classList.remove('dont-display');
     var gameData = flagsData.giveData();
     const flags = new Flags(gameData, flagsView, mainMap);
     flags.getFlagsToPlay();
@@ -156,11 +153,10 @@ mapDiv.classList.remove('dont-display');
   animalButton.addEventListener('click', function(){
     deleteButtons();
 
-    const keyBoard = new KeyBoard();
+
     var gameData = wordsData.giveData();
-    const words = new Words(keyBoard, gameData, wordsView);
+    const words = new Words(gameData, wordsView);
     words.getWordsToPlay('animal');
-    console.log(words.keyboard);
     words.prepareRound(0);
     keyPress(words);
     keyRelease();
@@ -175,11 +171,10 @@ mapDiv.classList.remove('dont-display');
   foodButton.addEventListener('click', function(){
     deleteButtons();
 
-    const keyBoard = new KeyBoard();
+
     var gameData = wordsData.giveData();
-    const words = new Words(keyBoard, gameData, wordsView);
+    const words = new Words( gameData, wordsView);
     words.getWordsToPlay('food');
-    console.log(words.keyboard);
     words.prepareRound(0);
     keyPress(words);
     keyRelease();
@@ -194,11 +189,10 @@ mapDiv.classList.remove('dont-display');
   colourButton.addEventListener('click', function(){
     deleteButtons();
 
-    const keyBoard = new KeyBoard();
+
     var gameData = wordsData.giveData();
-    const words = new Words(keyBoard, gameData, wordsView);
+    const words = new Words(gameData, wordsView);
     words.getWordsToPlay('colour');
-    console.log(words.keyboard);
     words.prepareRound(0);
     keyPress(words);
     keyRelease();
@@ -213,11 +207,10 @@ mapDiv.classList.remove('dont-display');
   clothingButton.addEventListener('click', function(){
     deleteButtons();
 
-    const keyBoard = new KeyBoard();
+
     var gameData = wordsData.giveData();
-    const words = new Words(keyBoard, gameData, wordsView);
+    const words = new Words( gameData, wordsView);
     words.getWordsToPlay('clothing');
-    console.log(words.keyboard);
     words.prepareRound(0);
     keyPress(words);
     keyRelease();
@@ -232,11 +225,10 @@ mapDiv.classList.remove('dont-display');
   testButton.addEventListener('click', function(){
     deleteButtons();
 
-    const keyBoard = new KeyBoard();
+
     var gameData = wordsData.giveData();
-    const words = new Words(keyBoard, gameData, wordsView);
+    const words = new Words(gameData, wordsView);
     words.getWordsToPlay('test');
-    console.log(words.keyboard);
     words.prepareRound(0);
     keyPress(words);
     keyRelease();

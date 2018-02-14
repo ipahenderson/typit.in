@@ -1,8 +1,7 @@
-const Words = function(keyboard, gamedata, gameview){
+const Words = function(gamedata, gameview){
   this.word = "";
   this.answer = "";
   this.nextletter = "";
-  this.keyboard = keyboard;
   this.gamedata = gamedata;
   this.gameview = gameview;
   this.wordsToPlay = [];
