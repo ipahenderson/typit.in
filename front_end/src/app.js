@@ -3,10 +3,13 @@ const keyRelease = require ('./models/keyRelease');
 const KeyBoard = require ('./models/keyboard.js');
 const WordsData = require('./models/wordsData.js');
 const MathsData = require('./models/mathsData.js');
+const FlagsData = require('./models/flagsData.js');
 const WordsView = require('./views/wordsView.js');
 const MathsView = require('./views/mathsView.js');
+const FlagsView = require('./views/flagsView.js');
 const Words = require('./models/words.js');
 const Maths = require('./models/maths.js');
+const Flags = require('./models/flags.js');
 const MapWrapper = require('./models/mapWrapper.js');
 
 
@@ -16,16 +19,18 @@ const app = function(){
   var mapDiv = document.getElementById('main-map');
 
 
-  var center = { lat: 36.204824, lng: 138.252924 };
+  var center = { lat: 56.890671, lng: -4.202646 };
 
-  var mainMap = new MapWrapper(mapDiv, center, 4);
+  var mainMap = new MapWrapper(mapDiv, center, 6);
 
   const wordsData = new WordsData('http://localhost:5000/api/words');
   const mathsData = new MathsData('http://localhost:5000/api/maths');
+  const flagsData = new FlagsData('http://localhost:5000/api/flags');
   const wordsView = new WordsView(document.querySelector('.game-window'));
   const mathsView = new MathsView(document.querySelector('.game-window'));
+  const flagsView = new FlagsView(document.querySelector('.game-window'));
 
-  const startButton = document.querySelector('#start-button');
+  const flagButton = document.querySelector('#flag-game-button');
 
   const animalButton = document.querySelector('#animal-game-button');
   const colourButton = document.querySelector('#colour-game-button');
@@ -41,6 +46,7 @@ const app = function(){
   const title = document.querySelector('#title');
   wordsData.getData();
   mathsData.getData();
+  flagsData.getData();
 
   var deleteButtons = function(){
     animalButton.parentNode.removeChild(animalButton);
@@ -53,8 +59,23 @@ const app = function(){
     divideButton.parentNode.removeChild(divideButton);
     multiplyButton.parentNode.removeChild(multiplyButton);
     title.parentNode.removeChild(title);
+    flagButton.parentNode.removeChild(flagButton);
+    mapDiv.classList.remove('dont-display');
+
   }
 
+
+
+  flagButton.addEventListener('click', function(){
+    deleteButtons();
+
+    var gameData = flagsData.giveData();
+    const flags = new Flags(gameData, flagsView, mainMap);
+    flags.getFlagsToPlay();
+    flags.prepareRound(0);
+    keyPress(flags);
+    keyRelease();
+  })
 
   addButton.addEventListener('click', function(){
     deleteButtons();

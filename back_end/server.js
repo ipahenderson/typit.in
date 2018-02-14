@@ -34,6 +34,14 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
     });
   })
 
+  server.get("/api/flags", function(req, res){
+    console.log('connection made');
+    db.collection("flags").find().toArray(function(err, result){
+      res.status(200);
+      res.json(result);
+    });
+  })
+
 
   server.listen(5000, function(){
     console.log("Typit Backend running on port: " + this.address().port);

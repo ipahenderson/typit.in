@@ -7,7 +7,7 @@ body{
 
 #flag-background{
   background-color: rgba(255, 255, 255, 0.5);
-  
+
 
 }
 
@@ -23,27 +23,40 @@ h1{
 #main-map {
   width: 200px;
   height: 200px;
-  margin: 0px 55px 0px 0px;
+  margin: 30px 55px 0px 0px;
   float: right;
   border: 2px solid black;
   border-radius: 90%;
 }
 
+#flag-answer-display{
+  margin-top: 5px;
+}
+
 #flag-image{
   float: left;
-  margin: 0px 0px 0px 55px;
+  margin: 28px 0px 0px 55px;
   height: 200px;
   width: 200px;
   border: 2px solid black;
   border-radius: 90%;
 }
 
+#answer-and-counter{
+  margin: 0px;
+}
+
 #flag-answer-display{
-  margin-top: 220px;
+  margin: 0;
+  margin-top: 250px;
+  margin-left: 30px;
 }
 
 #display-country{
   margin-bottom: 5px;
+  margin-top: 0px;
+  margin-right: 135px;
+  margin-left: 135px;
 
 }
 .game-container{
@@ -147,12 +160,25 @@ h1{
   background-image: url('/images/maths/divide.svg');
 }
 
+#flag-game-button{
+  background-image: url('/images/flags/earth-globe.svg');
+}
+
 #answer-display{
   margin-bottom: 25px;
 }
 
 #counter-display{
   margin: 0px 8px 5px 5px;
+  font-size: 18px;
+  float: right;
+  text-align: right;
+}
+
+#counter-display-flag{
+  margin: 0 auto;
+  margin-right: 5px;
+  margin-bottom: 5px;
   font-size: 18px;
   float: right;
   text-align: right;

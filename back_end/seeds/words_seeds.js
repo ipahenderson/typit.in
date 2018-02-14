@@ -11,6 +11,7 @@ MongoClient.connect("mongodb://localhost:27017", function(err, client){
 
   db.collection('words').drop();
   db.collection('maths').drop();
+  db.collection('flags').drop();
 
 
   db.collection('words').insert([
@@ -488,7 +489,7 @@ db.collection('maths').insert([
       name:'hungary',
       coords: { lat: 47.162494, lng: 19.503304  },
       zoom: 5,
-      image: "/images/flags/hunagry.svg"
+      image: "/images/flags/hungary.svg"
     },
     {
       name:'india',
@@ -568,8 +569,5 @@ db.collection('maths').insert([
       zoom: 6,
       image: "/images/flags/wales.svg"
     }
-
-
-
   ])
 });
