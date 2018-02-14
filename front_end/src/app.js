@@ -60,21 +60,28 @@ const app = function(){
     multiplyButton.parentNode.removeChild(multiplyButton);
     title.parentNode.removeChild(title);
     flagButton.parentNode.removeChild(flagButton);
-    mapDiv.classList.remove('dont-display');
+  
 
   }
 
 
 
+
+
   flagButton.addEventListener('click', function(){
     deleteButtons();
-
+mapDiv.classList.remove('dont-display');
     var gameData = flagsData.giveData();
     const flags = new Flags(gameData, flagsView, mainMap);
     flags.getFlagsToPlay();
     flags.prepareRound(0);
     keyPress(flags);
     keyRelease();
+
+    var speakButton = document.querySelector('#speaker');
+    speakButton.addEventListener('click', function(){
+      responsiveVoice.speak(flags.wordsToPlay[flags.roundCount].name)
+    });
   })
 
   addButton.addEventListener('click', function(){

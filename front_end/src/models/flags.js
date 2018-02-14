@@ -52,7 +52,10 @@ Flags.prototype.getFlagsToPlay = function(category){
     this.wordsToPlay = this.shuffle(playArray);
   }
   else{
-    this.wordsToPlay = this.gamedata;
+    var shuffleArray = this.shuffle(this.gamedata);
+    for (var i = 0; i < 10; i++) {
+    this.wordsToPlay.push(shuffleArray[i]);
+  }
   }
 };
 
@@ -88,7 +91,7 @@ Flags.prototype.prepareRound = function(index){
       this.gameview.render(this.wordsToPlay[i], this.answer, this.roundCount, numberofRounds, this.map);
     }
     if (index >= this.wordsToPlay.length){
-  
+
       this.gameview.winScreen();
     }
   }
