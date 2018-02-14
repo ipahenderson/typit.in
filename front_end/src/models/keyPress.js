@@ -15,7 +15,12 @@ const startKeyListener = function (game){
       document.querySelector(keyID).classList.add('correct-key');
     }
     gameIn.run(key)
-  }
+  };
+
+  function changeCSS(keyID){
+    document.querySelector(keyID).classList.add('pressed');
+    document.querySelector(keyID).classList.add('wrong-key');
+  };
 
   function keyPress(e){
     if(e.keyCode == 48){
@@ -161,22 +166,22 @@ const startKeyListener = function (game){
 
     }
     if(e.keyCode == 32){ // z
-      react(game, e.key, '#space');
+      changeCSS('#space');
     }
     if(e.keyCode == 13){ // z
-      react(game, e.key, '#enter');
+      changeCSS('#enter');
     }
     if(e.keyCode == 37){ // z
-      react(game, e.key, '#key_left');
+      changeCSS('#key_left');
     }
     if(e.keyCode == 38){ // z
-      react(game, e.key, '#key_up');
+      changeCSS('#key_up');
     }
     if(e.keyCode == 39){ // z
-      react(game, e.key, '#key_right');
+      changeCSS('#key_right');
     }
     if(e.keyCode == 40){ // z
-      react(game, e.key, '#key_down');
+      changeCSS('#key_down');
     }
 
   };
